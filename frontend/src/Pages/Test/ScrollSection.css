@@ -1,0 +1,211 @@
+.large-stylized-text {
+    font-family: 'Georgia', serif;
+    color: transparent;
+}
+
+.scroll-number-container.hidden,
+.accomplish-text-container.hidden,
+.description-block.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.scroll-number-container,
+.accomplish-text-container,
+.description-block {
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.scroll-number-container.visible,
+.accomplish-text-container.visible,
+.description-block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-text {
+    white-space: nowrap;
+    display: inline-block;
+    animation: marquee 25s linear infinite;
+    color: #02ad8b;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    letter-spacing: 6px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.image-color {
+    background: linear-gradient(135deg,
+            #4c4c4d 0%,
+            #4c4c4d 15%,
+            #4c4c4d 30%,
+            #516075 45%,
+            #54788c 60%,
+            #577cb3 75%,
+            #5a9dad 90%,
+            #a65fcf 100%);
+    background-repeat: no-repeat;
+}
+
+.layout-container {
+    background: radial-gradient(circle at 50% 50%, rgba(55, 65, 81, 1) 0%, rgba(30, 41, 59, 1) 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+}
+
+.text-column {
+    flex: 1;
+    max-width: 300px;
+    padding: 0 20px;
+}
+
+.text-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.checkbox-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    margin-right: 10px;
+    position: relative;
+}
+
+.checkbox-icon::after {
+    content: '✔';
+    position: absolute;
+}
+
+.text {
+    font-size: 1.1rem;
+    margin-right: 10px;
+    color: black;
+    font-weight: 15pt;
+}
+
+.divider {
+    width: 100%;
+    border: none;
+    border-top: 1px solid white;
+    margin-top: 10px;
+}
+
+.center-column {
+    flex-shrink: 0;
+    padding: 0 40px;
+}
+
+/* w-8 h-8 mx-3 */
+.scrolling-logo {
+    background-image: url("man.svg");
+    filter: invert(52%) sepia(42%) saturate(745%) hue-rotate(125deg) brightness(94%) contrast(92%);
+    width: 32pt;
+    height: 32pt;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.circuit-ring {
+    width: 350px;
+    height: 350px;
+    background-image: url("round.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    background-image: url("logo.png");
+}
+
+.create-button {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    color: black;
+    background-color: #02ad8b;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 40%;
+}
+
+.create-button:hover {
+    background-color: #567a99;
+    border: 2px black solid;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .text-column {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .left {
+        order: 1;
+    }
+
+    .center-column {
+        order: 2;
+    }
+
+    .right {
+        order: 3;
+    }
+
+    .center-column {
+        margin: 20px 0;
+    }
+
+    .text-design {
+        font-size: 1rem;
+        color: black;
+    }
+}

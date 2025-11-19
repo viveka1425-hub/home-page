@@ -1,0 +1,138 @@
+/* Background */
+/* Full screen reset */
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Full screen container */
+.login-container {
+    height: 100vh;
+    /* Force full height */
+    width: 100vw;
+    /* Full width */
+    background-color: #aad6a9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
+    /* Remove padding if unnecessary */
+}
+
+
+
+/* Card */
+.login-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 380px;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Text */
+.login-title {
+    font-size: 2rem;
+    color: #32593c;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.login-sub {
+    font-size: 14px;
+    color: #32593c;
+    margin-bottom: 20px;
+}
+
+/* Alerts */
+.alert {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.alert.success {
+    background: #e8f7ee;
+    color: #256b33;
+    border: 1px solid #87c58f;
+}
+
+.alert.error {
+    background: #fde8e8;
+    color: #b91c1c;
+    border: 1px solid #f5a4a4;
+}
+
+/* Inputs */
+.input-wrap {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-wrap input {
+    width: 100%;
+    padding: 14px 0px 14px 14px;
+    border-radius: 8px;
+    border: 1px solid #9cc9a4;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-wrap input:focus {
+    border-color: #32593c;
+}
+
+/* Eye Icon */
+.eye-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #32593c;
+    cursor: pointer;
+}
+
+/* Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    background: #32593c;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #24482d;
+}
+
+/* Signup link */
+.signup-text {
+    font-size: 13px;
+    margin-top: 15px;
+    color: #24482d;
+}
+
+.signup-text a {
+    color: #083c19;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Demo info */
+.demo-text {
+    margin-top: 5px;
+    font-size: 11px;
+    color: #32593c;
+}

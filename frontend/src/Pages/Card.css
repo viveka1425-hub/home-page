@@ -1,0 +1,58 @@
+.card-row {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    margin: 50px 0;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    height: 120px;
+    color: black;
+    border: 2px black solid;
+    padding: 0 15px;
+    border-radius: 50px;
+}
+
+
+/* Animation: Right → Left for Row 1 */
+@keyframes moveRightLeft {
+    0% {
+        transform: translateX(18%);
+    }
+
+    100% {
+        transform: translateX(-18%);
+    }
+}
+
+/* Animation: Left → Right for Row 2 */
+@keyframes moveLeftRight {
+    0% {
+        transform: translateX(-20%);
+    }
+
+    100% {
+        transform: translateX(20%);
+    }
+}
+
+/* Triggered on scroll */
+.scroll-right-left {
+    animation: moveRightLeft 10s linear infinite;
+}
+
+.scroll-left-right {
+    animation: moveLeftRight 10s linear infinite;
+}
+
+.card-number{
+    font-size: 85px;
+}
+
+.card-label{
+    font-size: 35px;
+}

@@ -1,0 +1,125 @@
+.footer {
+    background: #000;
+    color: #fff;
+    /* padding: 60px 8%; */
+    font-family: "Poppins", sans-serif;
+}
+
+.logo-B {
+    background-image: url("download.svg");
+    filter: brightness(0) invert(1) contrast(200%);
+}
+
+.sign{
+    background-image: url("sign.svg");
+    background-color: white;
+}
+.signup-btn {
+    width: 200%;
+    height: 20%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-left: 20pt;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.3s ease;
+}
+
+.signup-btn .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effects */
+.signup-btn:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+.signup-btn:hover .arrow {
+    transform: rotate(0deg);
+    /* arrow becomes straight */
+}
+
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #333;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.footer-links {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.footer-links>div:nth-child(2) {
+    margin-left: 60%;
+}
+
+.footer-margin {
+    margin-right: 50pt;
+}
+
+.footer-links a,
+.footer-links p {
+    display: block;
+    margin-bottom: 8px;
+    color: #d7d7d7;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    margin-top: 25px;
+    padding-top: 25px;
+    font-size: 14px;
+    color: #c1c1c1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: left;
+    }
+}
