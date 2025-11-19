@@ -2,53 +2,56 @@ import React, { useRef, useEffect, useState } from 'react';
 import '../Test/ScrollSection.css';
 
 // --- 1. Animation Data ---
-const SCROLL_DATA = [
-    { id: 1, number: "1,034", description: "Sample Data about Simple Things", isNumber: true },
-    { id: 2, number: "2", description: "Sample Data about Simple Things", isNumber: true },
-    { id: 3, number: "54", description: "Sample Data about Simple Things", isNumber: true },
-    { id: 4, number: "25", description: "Sample Data about Simple Things", isNumber: true },
-    { id: 5, number: "Accomplish Anything in Developing", description: "This is the space to introduce the Services section. Briefly describe the types of services offered and highlight any special benefits or features.", isNumber: false }
-];
+// const SCROLL_DATA = [
+//     { id: 1, number: "1,034", description: "Sample Data about Simple Things", isNumber: true },
+//     { id: 2, number: "2", description: "Sample Data about Simple Things", isNumber: true },
+//     { id: 3, number: "54", description: "Sample Data about Simple Things", isNumber: true },
+//     { id: 4, number: "25", description: "Sample Data about Simple Things", isNumber: true },
+//     { id: 5, number: "Accomplish Anything in Developing", description: "This is the space to introduce the Services section. Briefly describe the types of services offered and highlight any special benefits or features.", isNumber: false }
+// ];
 
-// --- 2. Custom Hook for Visibility (Intersection Observer) ---
-const useOnScreen = (ref, threshold = 0.5) => {
-    const [isIntersecting, setIntersecting] = useState(true);
+// // --- 2. Custom Hook for Visibility (Intersection Observer) ---
+// const useOnScreen = (ref, threshold = 0.5) => {
+//     const [isIntersecting, setIntersecting] = useState(true);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setIntersecting(entry.isIntersecting);
-            },
-            { threshold: threshold }
-        );
-        if (ref.current) {
-            observer.observe(ref.current);
-        }
-        return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
-            }
-        };
-    }, [ref, threshold]);
+//     useEffect(() => {
+//         const observer = new IntersectionObserver(
+//             ([entry]) => {
+//                 setIntersecting(entry.isIntersecting);
+//             },
+//             { threshold: threshold }
+//         );
+//         if (ref.current) {
+//             observer.observe(ref.current);
+//         }
+//         return () => {
+//             if (ref.current) {
+//                 observer.unobserve(ref.current);
+//             }
+//         };
+//     }, [ref, threshold]);
 
-    return isIntersecting;
-};
+//     return isIntersecting;
+// };
 
 // --- 3. Main Component: Renders All Scroll Sections ---
 const FullScrollingContent = () => {
     return (
-        <div style={{ fontFamily: 'Georgia, serif' }}>
-            <div
+        <div style={{ fontFamily: 'Georgia, serif', width: "950pt" }}>
+            {/* <div
                 style={{
                     height: "50vh",
                 }}
             >
-                <p style={{ padding: '20px' }}>Start of Dynamic Scroll Sections</p>
+                <p style={{ padding: '20px', color: "black" }}>Start of Dynamic Scroll Sections</p>
             </div>
-
-            {SCROLL_DATA.map(item => (
-                <ScrollSection key={item.id} {...item} />
-            ))}
+            <div>
+                <div style={{ width: "950pt" }}>
+                    {SCROLL_DATA.map(item => (
+                        <ScrollSection key={item.id} {...item} />
+                    ))}
+                </div>
+            </div> */}
             <div>
                 <div style={{ width: "950pt", height: "850pt" }} className="image-color">
                     <h1 style={{
@@ -60,7 +63,7 @@ const FullScrollingContent = () => {
                     }}>
                         Accomplish<br /> Anything in <br /> Developing
                     </h1>
-                    <h2 style={{ textAlign: "center", marginBottom:"40pt" }}>This is the space to introduce the Services section. Briefly describe the <br /> types of services offered and highlight any special benefits or features</h2>
+                    <h2 style={{ textAlign: "center", marginBottom: "40pt" }}>This is the space to introduce the Services section. Briefly describe the <br /> types of services offered and highlight any special benefits or features</h2>
                     {/* Left Column */}
                     <div className='content-wrapper'>
                         <div className="text-column left">

@@ -2,10 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const TeamDirectory = () => {
-    const navigate = useNavigate();
-    function linkedInOpen() {
-        navigate("https://www.linkedin.com/checkpoint/challengesV2/AQHN5ARscKEt9wAAAZqYcg-vq4V0c59D_4qqn8s6jnlvfnTg3ewvhoms4LU3sfxZMBSpOTpAShk7bUamojDKx9YakzXzsoInQg?ut=0eGEZJ1nXiuI01")
-    }
+    // const navigate = useNavigate();
     const teamMembers = [
         {
             name: "Harry Williams",

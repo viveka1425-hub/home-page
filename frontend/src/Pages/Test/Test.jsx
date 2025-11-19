@@ -6,6 +6,7 @@ import Footer from './Footer';
 import Profile from './Profile';
 import About from './About';
 import RollingImage from './RollingImage';
+import ScrollSectionsAppThird from './Third';
 const Test = () => {
     return (
         <div style={{  fontFamily:"sans-serif", color: "white"}}>
@@ -35,6 +36,9 @@ const Test = () => {
             </div>
             <div>
                 <Card />
+            </div>
+            <div>
+                <ScrollSectionsAppThird />
             </div>
             <div>
                 < FullScrollingContent />

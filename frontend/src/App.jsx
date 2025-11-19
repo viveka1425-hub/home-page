@@ -9,6 +9,7 @@ import Profile from './Pages/Test/Profile';
 import Home from "./Pages/Test/Home";
 import About from "./Pages/Test/About";
 import RollingImage from "./Pages/Test/RollingImage";
+import Third from "./Pages/Test/Third";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/Card",
     element: <Card />
+  },
+  {
+    path:"/Third",
+    element:<Third />
   },
   {
     path:"/ScrollSection",

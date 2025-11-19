@@ -29,7 +29,7 @@ const styles = {
         fontFamily: "Poppins, sans-serif",
     },
     image: {
-        backgroundImage: "url('./light.png')",
+        backgroundImage: "url('n')",
         backgroundRepeat: "no-repeat",
     }
 };
