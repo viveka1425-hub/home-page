@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 
 const TeamDirectory = () => {
-    // const navigate = useNavigate();
     const teamMembers = [
         {
             name: "Harry Williams",
@@ -52,7 +50,8 @@ const TeamDirectory = () => {
             height: "150pt",
             minHeight: '100vh',
             background: '#fafafa',
-            padding: '40px 20px'
+            padding: '40px 20px',
+            marginBottom:'28pt',
         },
         grid: {
             maxWidth: '1400px',
@@ -116,7 +115,7 @@ const TeamDirectory = () => {
                                 <h3 style={styles.name}>{member.name}</h3>
                                 <p style={styles.title}>{member.title}</p>
                             </div>
-                            <button style={styles.button}><Link to ="https://www.linkedin.com/checkpoint/challengesV2/AQHN5ARscKEt9wAAAZqYcg-vq4V0c59D_4qqn8s6jnlvfnTg3ewvhoms4LU3sfxZMBSpOTpAShk7bUamojDKx9YakzXzsoInQg?ut=0eGEZJ1nXiuI01">LinkedIn</Link></button>
+                            <button style={styles.button}><a href ="https://www.linkedin.com/checkpoint/challengesV2/AQHN5ARscKEt9wAAAZqYcg-vq4V0c59D_4qqn8s6jnlvfnTg3ewvhoms4LU3sfxZMBSpOTpAShk7bUamojDKx9YakzXzsoInQg?ut=0eGEZJ1nXiuI01">LinkedIn</a></button>
                         </div>
                     ))}
                 </div>

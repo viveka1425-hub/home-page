@@ -30,9 +30,8 @@ export default About;
 
 const styles = {
     page: {
-        width: "950pt",
-        height: "600pt",
         background: "linear-gradient(to bottom, #02ad8b, #ffffff)",
+        width:"21%",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -46,7 +45,7 @@ const styles = {
     hurdleWrapper: {
         position: "relative",
         width: "900pt",
-        height: "950pt",
+        height: "600pt",
     },
 
     hurdle: {

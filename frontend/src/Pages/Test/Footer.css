@@ -1,125 +1,142 @@
+/* ===== MAIN FOOTER ===== */
 .footer {
     background: #000;
     color: #fff;
-    /* padding: 60px 8%; */
+    padding: 50px 5%;
     font-family: "Poppins", sans-serif;
 }
 
-.logo-B {
-    background-image: url("download.svg");
-    filter: brightness(0) invert(1) contrast(200%);
+/* ===== BRAND TITLE ===== */
+.brand h1 {
+    font-size: clamp(28px, 4vw, 60px);
+    font-weight: 500;
+    line-height: 1.2;
 }
 
-.sign{
-    background-image: url("sign.svg");
-    background-color: white;
-}
-.signup-btn {
-    width: 200%;
-    height: 20%;
-    text-align: center;
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-    border-radius: 20px;
-    margin-left: 20pt;
-    cursor: pointer;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    transition: 0.3s ease;
-}
-
-.signup-btn .arrow {
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-/* Hover effects */
-.signup-btn:hover {
-    background-color: white;
-    color: black;
-    border-color: black;
-}
-
-.signup-btn:hover .arrow {
-    transform: rotate(0deg);
-    /* arrow becomes straight */
-}
-
-
+/* ===== TOP SECTION ===== */
 .footer-top {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     flex-wrap: wrap;
     gap: 40px;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     border-bottom: 1px solid #333;
 }
 
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 22px;
-    font-weight: 500;
-}
-
+/* ===== LINK SECTIONS ===== */
 .footer-links {
     display: flex;
-    align-items: flex-start;
-    gap: 40px;
+    flex-wrap: wrap;
+    gap: 50px;
+    /* margin-right: "-30pt"; */
 }
 
-.footer-links>div:nth-child(2) {
-    margin-left: 60%;
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
 }
 
-.footer-margin {
-    margin-right: 50pt;
-}
-
-.footer-links a,
-.footer-links p {
-    display: block;
-    margin-bottom: 8px;
+.footer-section p {
     color: #d7d7d7;
-    text-decoration: none;
-    font-size: 15px;
-    transition: 0.3s;
+    margin-bottom: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-.footer-links a:hover {
+.footer-section p:hover {
     color: #fff;
 }
 
+/* ===== BUTTON ===== */
+.signup-btn {
+    padding: 12px 25px;
+    background-color: black;
+    color: white;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.4s ease;
+}
+
+.signup-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+.signup-btn .arrow {
+    transition: 0.3s ease;
+}
+
+/* ===== LOGO ===== */
+.logo-B {
+    width: 40px;
+    height: 40px;
+    background-image: url("download.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: brightness(0) invert(1) contrast(200%);
+}
+
+.brand-logo {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* SIGN IMAGE */
+.sign {
+    width: 90pt;
+    height: 90pt;
+    background-image: url("sign.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: brightness(0) invert(1) contrast(100%);
+}
+
+/* ===== BOTTOM SECTION ===== */
 .footer-bottom {
-    margin-top: 25px;
-    padding-top: 25px;
     font-size: 14px;
-    color: #c1c1c1;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+.built-by {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Tablets */
+@media (max-width: 300px) {
     .footer-top {
         flex-direction: column;
         align-items: flex-start;
     }
 
     .footer-links {
-        flex-direction: column;
-        gap: 30px;
+        gap: 40px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 300px) {
+    .footer {
+        padding: 40px 5%;
+    }
+
+    .brand h1 {
+        font-size: clamp(24px, 6vw, 40px);
     }
 
     .footer-bottom {
         flex-direction: column;
         gap: 10px;
-        text-align: left;
     }
 }

@@ -52,7 +52,7 @@ const NumbersWithStars = () => {
         <div style={{
             position: 'relative',
             height: "600pt",
-            width: '100%',
+            width: '21%',
             minHeight: '100vh',
             marginBottom:"-60pt",
             background: 'linear-gradient(180deg, #406964 0%, #80aba3 25%, #ebf7f3 50%, #d1c4ff 75%, #d1c4ff 100%)',

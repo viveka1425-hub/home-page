@@ -1,4 +1,4 @@
-import "../Test/Rolling.css";
+// import "../Test/Rolling.css";
 const RollingImage = () => {
     return (
         <div style={styles.home}>
@@ -16,8 +16,7 @@ export default RollingImage;
 const styles = {
     home: {
         background: "#3c5961",
-        width: "950pt",
-        height: "600pt",
+        width:"21%",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -27,8 +26,8 @@ const styles = {
     },
 
     RollImage: {
-        width: "700pt",
-        height: "550pt",
+        width: "980pt",
+        height: "750pt",
         backgroundImage: "url('/Rolling.jpg')",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
