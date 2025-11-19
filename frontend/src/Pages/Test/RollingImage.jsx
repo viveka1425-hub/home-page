@@ -1,32 +1,38 @@
-import "../Test/RollingImage.css";
-
+import "../Test/Rolling.css";
 const RollingImage = () => {
     return (
-        <div style={{
-            width: "950pt",
-            height: "600pt"
-        }} className="style">
+        <div style={styles.home}>
             <h1>Project Name</h1>
             <p>Client Name</p>
-            <div className="Scrolling"></div>
+
+            <div style={styles.RollImage} className="roll"></div>
         </div>
     )
 }
+
 export default RollingImage;
 
-// const style = {
-//     home: {
-//         background: "#375661",
-//         width: "950pt",
-//         height: "600pt",
-//         flexDirection: "column",
-//         alignItems: "center",
-//         textAlign: "30px",
-//         padding: "10px",
-//         boxSizing: "border-box"
-//     },
-//     RollImage: {
-//         backgroundImage: "url('/Rolling.png')",
-//         backgroundRepeat: "no-repeat",
-//     }
-// }
+
+const styles = {
+    home: {
+        background: "#3c5961",
+        width: "950pt",
+        height: "600pt",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        color: "#fff",
+        padding: "20px",
+        boxSizing: "border-box"
+    },
+
+    RollImage: {
+        width: "700pt",
+        height: "550pt",
+        backgroundImage: "url('/Rolling.jpg')",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundSize: "contain",
+        marginTop: "20px"
+    },
+};
