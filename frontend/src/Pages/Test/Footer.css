@@ -2,14 +2,15 @@
 .footer {
     background: #000;
     color: #fff;
-    padding: 50px 5%;
+    padding-left: 10pt;
+    padding-right: 10pt;
     font-family: "Poppins", sans-serif;
 }
 
 /* ===== BRAND TITLE ===== */
 .brand h1 {
     font-size: clamp(28px, 4vw, 60px);
-    font-weight: 500;
+    /* font-weight: 500; */
     line-height: 1.2;
 }
 
@@ -18,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 40px;
+    /* gap: 40px; */
     padding-bottom: 40px;
     border-bottom: 1px solid #333;
 }
@@ -28,7 +29,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    /* margin-right: "-30pt"; */
 }
 
 .footer-section h3 {

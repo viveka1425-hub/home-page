@@ -5,42 +5,42 @@ const TeamDirectory = () => {
         {
             name: "Harry Williams",
             title: "Director of Mobile Gaming, Fixer",
-            image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
+            image: "pro1.jpg"
         },
         {
             name: "Veronika Zakharova",
             title: "Director of Mobile Gaming, Fixer",
-            image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
+            image: "pro2.jpg"
         },
         {
             name: "Lissa cross",
             title: "Director of Mobile Gaming, Fixer",
-            image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop"
+            image: "pro3.jpg"
         },
         {
             name: "sheldon Smith",
             title: "Director of Mobile Gaming, Fixer",
-            image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop"
+            image: "pro4.jpg"
         },
         {
             name: "Akira Lee",
             title: "Director of Mobile Gaming, Fixer",
-            image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
+            image: "pro5.jpg"
         },
         {
             name: "Ann Jacobs",
             title: "Director of Mobile Gaming, Fixer",
-            image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop"
+            image: "pro6.jpg"
         },
         {
             name: "Murty Yang",
             title: "Director of Mobile Gaming, Fixer",
-            image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop"
+            image: "pro7.jpg"
         },
         {
             name: "Jason Guhl",
             title: "Director of Mobile Gaming, Fixer",
-            image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop"
+            image: "pro8.jpg"
         }
     ];
 
