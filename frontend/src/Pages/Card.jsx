@@ -23,7 +23,7 @@ export default function CardScroll() {
     }, []);
 
     return (
-        <div style={{ backgroundColor: "white" }}>
+        <div style={{ backgroundColor: "white", width:"21%" }}>
             <div style={{ color: "black", marginLeft: "35rem" }}>
                 <h2 ref={triggerRef}>Sample Numbers</h2>
                 <h1 style={{marginTop:-18}} ref={triggerRef}>Row No-1</h1>

@@ -42,11 +42,11 @@
 
 /* Triggered on scroll */
 .scroll-right-left {
-    animation: moveRightLeft 10s linear infinite;
+    animation: moveRightLeft 5s linear infinite;
 }
 
 .scroll-left-right {
-    animation: moveLeftRight 10s linear infinite;
+    animation: moveLeftRight 5s linear infinite;
 }
 
 .card-number{
