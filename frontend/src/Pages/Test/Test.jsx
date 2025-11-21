@@ -7,6 +7,7 @@ import About from './About';
 import RollingImage from './RollingImage';
 import ScrollSectionsAppThird from './Third';
 import DevelopingFourth from './Fourth';
+import Abc from './Abc';
 const Test = () => {
     return (
         <div style={{ fontFamily: "sans-serif", color: "white" }}>
@@ -48,6 +49,9 @@ const Test = () => {
             </div>
             <div>
                 <RollingImage />
+            </div>
+            <div>
+                <Abc />
             </div>
             <div>
                 <Profile />

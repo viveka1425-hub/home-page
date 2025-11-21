@@ -10,6 +10,7 @@ import Home from "./Pages/Test/Home";
 import About from "./Pages/Test/About";
 import RollingImage from "./Pages/Test/RollingImage";
 import Third from "./Pages/Test/Third";
+import Abc from "./Pages/Test/Abc";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: "/RollingImage",
     element: <RollingImage />
+  },
+  {
+    path: "/Abc",
+    element: <Abc />
   }
 ])
 export default function App() {

@@ -10,12 +10,12 @@ const About = () => {
             </center>
 
             <div style={styles.hurdleWrapper}>
-                {[1, 2, 3, 4].map((i) => (
+                {[1, 2.5, 3.5, 4.5].map((i) => (
                     <div
                         key={i}
                         style={{
                             ...styles.hurdle,
-                            transform: `scale(${1 - i * 0.15}) translateY(${i * 20}px)`
+                            transform: `scale(${1 - i * 0.17}) translateY(${i * 20}px)`
                         }}
                     />
                 ))}
@@ -54,8 +54,8 @@ const styles = {
         left: 0,
         right: 0,
         margin: "auto",
-        width: "800pt",
-        height: "400pt",
+        width: "850pt",
+        height: "600pt",
         backgroundImage: "url('/light.png')",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
