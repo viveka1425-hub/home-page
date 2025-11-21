@@ -1,15 +1,15 @@
 // import React, { useEffect } from 'react';
 import '../Test/Test.css';
 import Card from '../Card';
-import FullScrollingContent from "../Test/ScrollSection";
 import Footer from './Footer';
 import Profile from './Profile';
 import About from './About';
 import RollingImage from './RollingImage';
 import ScrollSectionsAppThird from './Third';
+import DevelopingFourth from './Fourth';
 const Test = () => {
     return (
-        <div style={{  fontFamily:"sans-serif", color: "white"}}>
+        <div style={{ fontFamily: "sans-serif", color: "white" }}>
             <div className="hero-section">
                 <header className="top-bar">
                     <nav className="nav-container">
@@ -21,7 +21,7 @@ const Test = () => {
                 <div className="background-image"></div>
                 {/* Main content and overlay */}
                 <div className="content-overlay">
-                    <h1 className="main-title">I am a Sample<br/> Website</h1>
+                    <h1 className="main-title">I am a Sample<br /> Website</h1>
                     <h4 className="subtitle">
                         I'm a Sample<br />
                         Website, Create me<br />
@@ -41,7 +41,7 @@ const Test = () => {
                 <ScrollSectionsAppThird />
             </div>
             <div>
-                < FullScrollingContent />
+                < DevelopingFourth />
             </div>
             <div>
                 <About />

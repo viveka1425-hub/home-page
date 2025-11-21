@@ -12,14 +12,13 @@ const RollingImage = () => {
 
 export default RollingImage;
 
-
 const styles = {
     home: {
-        background: "#3c5961",
-        width:"21%",
+        backgroundImage: "url('/Rolling.jpg')",
+        backgroundRepeat: "no-repeat",
+        width: "21%",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
         color: "#fff",
         padding: "20px",
         boxSizing: "border-box"
@@ -27,9 +26,7 @@ const styles = {
 
     RollImage: {
         width: "980pt",
-        height: "750pt",
-        backgroundImage: "url('/Rolling.jpg')",
-        backgroundRepeat: "no-repeat",
+        height: "650pt",
         backgroundPosition: "center",
         backgroundSize: "contain",
         marginTop: "20px"

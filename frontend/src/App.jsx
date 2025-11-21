@@ -3,7 +3,7 @@ import { RouterProvider } from "react-router-dom";
 import Login from "./Pages/Login/login";
 import Test from "./Pages/Test/Test";
 import Card from "./Pages/Card";
-import ScrollSection from "./Pages/Test/ScrollSection";
+import Fourth from "./Pages/Test/Fourth";
 import Footer from "./Pages/Test/Footer";
 import Profile from './Pages/Test/Profile';
 import Home from "./Pages/Test/Home";
@@ -25,31 +25,31 @@ const router = createBrowserRouter([
     element: <Card />
   },
   {
-    path:"/Third",
-    element:<Third />
+    path: "/Third",
+    element: <Third />
   },
   {
-    path:"/ScrollSection",
-    element:<ScrollSection />
+    path: "/Fourth",
+    element: <Fourth />
   },
   {
-    path:"/Footer",
+    path: "/Footer",
     element: < Footer />
   },
   {
-    path:"/Profile",
+    path: "/Profile",
     element: <Profile />
   },
   {
-    path:"/Home",
+    path: "/Home",
     element: < Home />
   },
   {
-    path:"/About",
+    path: "/About",
     element: <About />
   },
   {
-    path:"/RollingImage",
+    path: "/RollingImage",
     element: <RollingImage />
   }
 ])

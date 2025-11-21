@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "../Test/Third.css"
 const AnimatedStar = ({ size = 40 }) => {
     return (
         <div>
@@ -44,10 +44,10 @@ const AnimatedStar = ({ size = 40 }) => {
 
 const NumbersWithStars = () => {
     const numbers = [
-        { id: 1, value: "1,034", position: { top: '10%', left: '30%' } },
-        { id: 2, value: "2", position: { top: '35%', left: '65%' } },
-        { id: 3, value: "54", position: { top: '60%', left: '71%' } },
-        { id: 4, value: "25", position: { top: '80%', left: '22.5%' } }
+        { id: 1, value: "1,034", text: "Sample Data about Sample Things", position: { top: '10%', left: '35%' } },
+        { id: 2, value: "2", text: "Sample Data about Sample Things", position: { top: '35%', left: '66%' } },
+        { id: 3, value: "54", text: "Sample Data about Sample Things", position: { top: '60%', left: '73%' } },
+        { id: 4, value: "25", text: "Sample Data about Sample Things", position: { top: '80%', left: '25%' } }
     ];
 
     return (
@@ -126,38 +126,67 @@ const NumbersWithStars = () => {
                 />
             </svg>
 
-            <div style={{marginLeft:"18%", marginTop:"12%"}}>
+            <div style={{ marginLeft: "18%", marginTop: "12%" }}>
                 <img src='line.png'></img>
             </div>
             {/* Numbers with Stars */}
-            {numbers.map((item) => (
-                <div
-                    key={item.id}
-                    style={{
-                        position: 'absolute',
-                        top: item.position.top,
-                        left: item.position.left,
-                        transform: 'translate(-50%, -50%)',
-                        display: 'flex',
-                        flexDirection: 'row',
-                        alignItems: 'center',
-                        gap: '15px'
-                    }}
-                >
-                    {/* Star */}
-                    <AnimatedStar size={50} />
+            <div>
+                {numbers.map((item) => (
+                    <div
+                        key={item.id}
+                        style={{
+                            position: "absolute",
+                            top: item.position.top,
+                            left: item.position.left,
+                            transform: "translate(-50%, -50%)",
 
-                    {/* Number */}
-                    <div style={{
-                        fontSize: '90px',
-                        fontWeight: 'bold',
-                        color: 'black',
-                        fontFamily: 'Georgia, serif',
-                    }}>
-                        {item.value}
+                            display: "flex",
+                            flexDirection: "column",   // 👈 makes text go to next line
+                            alignItems: "center",
+                            gap: "5px"
+                        }}
+                    >
+                        {/* Row: Star + Number */}
+                        <div
+                            style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                alignItems: "center",
+                                gap: "15px"
+                            }}
+                        >
+                            <AnimatedStar size={50} />
+
+                            <div
+                                style={{
+                                    fontSize: "130pt",
+                                    fontFamily: "Didot, serif",
+                                    backgroundImage: "url('Star.png')",
+                                    backgroundSize: "200%",
+                                    backgroundPosition: "0% 0%",
+                                    color: "transparent",
+                                    WebkitBackgroundClip: "text",
+                                    animation: "moveBG 11s linear infinite",
+                                }}
+                            >
+                                {item.value}
+                            </div>
+                        </div>
+
+                        {/* Text in NEW LINE */}
+                        <div
+                            style={{
+                                color: "black",
+                                textAlign: "center", // optional
+                                whiteSpace: "pre-line" // if you want multi-line text
+                            }}
+                        >
+                            {item.text}
+                        </div>
                     </div>
-                </div>
-            ))}
+                ))}
+
+            </div>
 
             <style>{`
                 @keyframes rotate { 
