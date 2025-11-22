@@ -47,7 +47,7 @@ const TeamDirectory = () => {
     const styles = {
         container: {
             width: "950pt",
-            height: "150pt",
+            // height: "150pt",
             minHeight: '100vh',
             background: '#fafafa',
             padding: '40px 20px',
