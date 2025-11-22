@@ -47,8 +47,8 @@ export default function Abc() {
                 </div>
 
                 <div className="bottom">
-                    <h2 style={{ color: "#9070c4", margin:"30pt" }}>A-Z PROJECT</h2>
-                    <p style={{ color: "white", margin:"30pt" }} className="text">
+                    <h2 style={{ color: "#9070c4", margin:"30pt", fontSize:"48px" }}>A-Z PROJECT</h2>
+                    <p style={{ color: "white", marginLeft:"30pt", marginBottom:"28%", fontsize:"45px" }} className="text">
                         Download our library of transparent video letters<br />
                         and add them to your next project.
                     </p>

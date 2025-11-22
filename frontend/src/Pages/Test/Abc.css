@@ -15,7 +15,6 @@
 .rotate-img {
   position: absolute;
   width: 250px;
-  height: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -35,7 +34,7 @@
 
 /* RIGHT PANEL */
 .right {
-  width: 50%;
+  width: 45%;
   display: flex;
   flex-direction: column;
 }
@@ -54,15 +53,16 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  border: 1px solid #333;
+  border: 2px solid #fff;
 }
 
 .box:hover {
+  border: 1px solid #333;
   background: white;
   color: black;
+  font-size: 78pt;
 }
 
 .bottom {
   background: black;
-  height: 42vh;
 }
