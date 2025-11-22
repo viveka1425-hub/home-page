@@ -44,10 +44,10 @@ const AnimatedStar = ({ size = 40 }) => {
 
 const NumbersWithStars = () => {
     const numbers = [
-        { id: 1, value: "1,034", text: "Sample Data about Sample Things", position: { top: '10%', left: '35%' } },
-        { id: 2, value: "2", text: "Sample Data about Sample Things", position: { top: '35%', left: '66%' } },
-        { id: 3, value: "54", text: "Sample Data about Sample Things", position: { top: '60%', left: '73%' } },
-        { id: 4, value: "25", text: "Sample Data about Sample Things", position: { top: '80%', left: '25%' } }
+        { id: 1, value: "1,034", text: "Sample Data about Sample Things", position: { top: '10%', left: '38%' } },
+        { id: 2, value: "2", text: "Sample Data about Sample Things", position: { top: '35%', left: '69.5%' } },
+        { id: 3, value: "54", text: "Sample Data about Sample Things", position: { top: '60%', left: '78%' } },
+        { id: 4, value: "25", text: "Sample Data about Sample Things", position: { top: '80%', left: '27.5%' } }
     ];
 
     return (
@@ -167,6 +167,7 @@ const NumbersWithStars = () => {
                                     color: "transparent",
                                     WebkitBackgroundClip: "text",
                                     animation: "moveBG 11s linear infinite",
+                                    marginLeft:"50pt"
                                 }}
                             >
                                 {item.value}
@@ -177,8 +178,6 @@ const NumbersWithStars = () => {
                         <div
                             style={{
                                 color: "black",
-                                textAlign: "center", // optional
-                                whiteSpace: "pre-line" // if you want multi-line text
                             }}
                         >
                             {item.text}

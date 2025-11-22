@@ -14,11 +14,12 @@
 /* Rotating foreground image */
 .rotate-img {
   position: absolute;
-  width: 250px;
+  width: 600px;
+  font-weight: 40px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: earthSpin 5s linear infinite;
+  /* animation: earthSpin 5s linear infinite; */
 }
 
 @keyframes earthSpin {
@@ -34,7 +35,7 @@
 
 /* RIGHT PANEL */
 .right {
-  width: 45%;
+  width: 40%;
   display: flex;
   flex-direction: column;
 }
@@ -42,13 +43,13 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  height: 90vh;
+  height: 130vh;
 }
 
 .box {
   background: #111;
   color: white;
-  font-size: 48px;
+  font-size: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,7 +61,7 @@
   border: 1px solid #333;
   background: white;
   color: black;
-  font-size: 78pt;
+  font-size: 50pt;
 }
 
 .bottom {

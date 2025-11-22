@@ -11,9 +11,26 @@ export default function Footer() {
           <div className="footer-column">
             <div className="left">
               <div className="brand">
-                <button className="signup-btn">
-                  signUp <span className="arrow">➜</span>
+                <button className="signup-btn"
+                  onMouseEnter={(e) => {
+                    e.currentTarget.querySelector(".arrow").style.transform = "rotate(-90deg)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.querySelector(".arrow").style.transform = "rotate(0deg)";
+                  }}
+                >
+                  Signup
+                  <span
+                    className="arrow"
+                    style={{
+                      display: "inline-block",
+                      transition: "0.3s",
+                    }}
+                  >
+                    ⟶  
+                  </span>
                 </button>
+
               </div>
 
               <div className="brand-logo">
