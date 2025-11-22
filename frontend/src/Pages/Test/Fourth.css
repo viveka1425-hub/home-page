@@ -170,7 +170,7 @@
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-left: 36%;
+    /* margin-left: 36%; */
 }
 
 .create-button:hover {
@@ -180,7 +180,7 @@
 
 @media (max-width: 768px) {
     .content-wrapper {
-        flex-direction: column;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .text-column {
