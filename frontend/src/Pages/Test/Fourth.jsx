@@ -62,11 +62,12 @@ const DevelopingFourth = () => {
                                 </div>
                             </div>
                         </div>
+
+                        {/* Button */}
+                        <button className="create-button">
+                            Create Now!
+                        </button>
                     </center>
-                    {/* Button */}
-                    <button className="create-button">
-                        Create Now!
-                    </button>
                 </div>
             </div>
 

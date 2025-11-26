@@ -1,23 +1,72 @@
-.fourth {
+.fourth{
     min-width: 80vh;
 }
+.scroll-wrapper {
+    overflow: hidden;
+    background: white;
+    padding: 10px 0;
+}
 
+/* Text animation */
 .scroll-text {
     white-space: nowrap;
-    /* display: inline-block; */
+    display: inline-block;
     animation: marquee 25s linear infinite;
     color: #02ad8b;
     font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 48px;
-    letter-spacing: 4px;
+    font-weight: 600;
+    font-size: clamp(20px, 5vw, 48px); /* 🎯 responsive font */
+    letter-spacing: clamp(2px, 1vw, 4px);
 }
 
-.brand-font {
+/* Logo between text */
+.scroll-item {
+    display: inline-flex;
+    align-items: center;
+    margin-right: clamp(10px, 4vw, 40px); /* spacing scales */
+}
+
+/* Responsive Icon */
+.scrolling-logo {
+    background-image: url("man.svg");
+    filter: invert(52%) sepia(42%) saturate(745%) hue-rotate(125deg) brightness(94%) contrast(92%);
+    width: clamp(20px, 5vw, 40px);
+    height: clamp(20px, 5vw, 40px);
+    margin: 0 10px;
+}
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+    .scroll-text {
+        animation-duration: 15s; /* Faster scrolling on small screens */
+    }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .scroll-text {
+        animation-duration: 20s;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    .scroll-text {
+        animation-duration: 25s;
+    }
+}
+
+/* Animation */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+
+.brand-font{
     font-size: 25pt;
     margin-left: 10pt;
 }
-
 @keyframes marquee {
     0% {
         transform: translateX(0);
@@ -100,16 +149,6 @@
     padding: 0 40px;
 }
 
-/* w-8 h-8 mx-3 */
-.scrolling-logo {
-    background-image: url("man.svg");
-    filter: invert(52%) sepia(42%) saturate(745%) hue-rotate(125deg) brightness(94%) contrast(92%);
-    width: 32pt;
-    height: 32pt;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
 .circuit-ring {
     width: 350px;
     height: 350px;
@@ -155,8 +194,8 @@
     }
 }
 
-@media (min-width: 1024px) {
-    .fourth {
-        width: 945pt;
+@media (min-width: 1024px){
+    .fourth{
+        width:945pt;
     }
 }
