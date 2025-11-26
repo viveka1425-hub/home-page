@@ -88,12 +88,6 @@
 
 /* Desktop View */
 @media (min-width: 1024px) {
-    .hero-section {
-        background-image: url(first.jpg);
-        min-height: 110vh;
-        width:930pt;
-    }
-
     .top-bar {
         position: relative;
         width: 50%;
