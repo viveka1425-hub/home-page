@@ -3,8 +3,8 @@ import '../Test/Fourth.css';
 
 const DevelopingFourth = () => {
     return (
-        <div style={{ fontFamily: 'Georgia, serif', width: "21%" }}>
-            <div style={{ textAlign: "center" }}>
+        <div style={{ fontFamily: 'Georgia, serif' }}>
+            <div className='fourth'>
                 <div style={{ height: "850pt" }} className="image-color">
                     <h1 style={{
                         color: "black",
@@ -72,7 +72,7 @@ const DevelopingFourth = () => {
 
 
             {/* Footer/End Spacer */}
-            <div style={{ overflow: "hidden", background: "white", padding: -20 }}>
+            {/* <div style={{ overflow: "hidden", background: "white", padding: -20 }}>
                 <div className="scroll-text">
                     {[...Array(20)].map((_, i) => (
                         <span key={i} style={{ display: "inline-flex", alignItems: "center" }}>
@@ -81,7 +81,7 @@ const DevelopingFourth = () => {
                         </span>
                     ))}
                 </div>
-            </div>
+            </div> */}
 
         </div>
     );

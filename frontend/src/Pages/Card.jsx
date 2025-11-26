@@ -1,91 +1,97 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../Pages/Card.css";
 
-export default function CardScroll() {
-    const triggerRef = useRef();
-    const [animate, setAnimate] = useState(true);
+gsap.registerPlugin(ScrollTrigger);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setAnimate(true);
+export default function CardScrollSection() {
+
+    const sectionRef = useRef(null);
+    const row1Ref = useRef(null);
+    const row2Ref = useRef(null);
+
+    useLayoutEffect(() => {
+
+        const ctx = gsap.context(() => {
+
+            // Pin section
+            ScrollTrigger.create({
+                trigger: sectionRef.current,
+                start: "top top",
+                end: "+=1200",
+                pin: true,
+                scrub: 1,
+            });
+
+            // Row 1 → moves left
+            gsap.fromTo(
+                row1Ref.current,
+                { x: "45%" },
+                {
+                    x: "-75%",
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: "top top",
+                        end: "+=1200",
+                        scrub: 1,
+                    },
                 }
-            },
-            { threshold: 0.5 }
-        );
+            );
 
-        if (triggerRef.current) observer.observe(triggerRef.current);
+            // Row 2 → moves right
+            gsap.fromTo(
+                row2Ref.current,
+                { x: "-75%" },
+                {
+                    x: "55%",
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: "top top",
+                        end: "+=1200",
+                        scrub: 1,
+                    },
+                }
+            );
+        });
 
-        return () => {
-            if (triggerRef.current) observer.unobserve(triggerRef.current);
-        };
+        return () => ctx.revert();
     }, []);
 
     return (
-        <div style={{ backgroundColor: "white" }}>
-            <div style={{ color: "black", marginLeft: "35rem" }}>
-                <h2 ref={triggerRef}>Sample Numbers</h2>
-                <h1 style={{marginTop:-18}} ref={triggerRef}>Row No-1</h1>
+        <section ref={sectionRef} className="card-scroll-section">
+            <div className="title-block">
+                <h2>Sample Numbers</h2>
+                <h1>Row No - 1</h1>
             </div>
 
-            <div className={`card-row ${animate ? "scroll-right-left" : ""}`}>
-                <div class="card">
-                    <div class="card-number">61</div>
-                    <div class="card-label">Unit</div>
-                </div>
-
-                <div class="card">
-                    <div class="card-number">73</div>
-                    <div class="card-label">Unit</div>
-                </div>
-
-                <div class="card">
-                    <div class="card-number">89</div>
-                    <div class="card-label">Unit</div>
-                </div>
-
-                <div class="card">
-                    <div class="card-number">102</div>
-                    <div class="card-label">Unit</div>
-                </div>
-
-                <div class="card">
-                    <div class="card-number">+102</div>
-                    <div class="card-label">Unit</div>
-                </div>
+            {/* Row 1 */}
+            <div ref={row1Ref} className="card-row">
+                {["61", "73", "89", "102", "+102"].map((num, i) => (
+                    <div className="card-item" key={i}>
+                        <div className="card-number">{num}</div>
+                        <div className="card-label">Unit</div>
+                    </div>
+                ))}
             </div>
 
-            <div style={{ color: "black", marginLeft: "35rem" }}>
-                <h2 ref={triggerRef}>Sample Numbers</h2>
-                <h1 style={{marginTop:-18}} ref={triggerRef}>Row No-2</h1>
+            {/* Row 2 */}
+            <div className="title-block">
+                <h2>Sample Numbers</h2>
+                <h1>Row No - 2</h1>
             </div>
-            <div className={`card-row ${animate ? "scroll-left-right" : ""}`}>
-                <div class="card">
-                    <div class="card-number">49</div>
-                    <div class="card-label">Unit</div>
-                </div>
 
-                <div class="card">
-                    <div class="card-number">59</div>
-                    <div class="card-label">Unit</div>
-                </div>
-
-                <div class="card">
-                    <div class="card-number">71</div>
-                    <div class="card-label">Unit</div>
-                </div>
-
-                <div class="card">
-                    <div class="card-number">81</div>
-                    <div class="card-label">Unit</div>
-                </div>
-
-                <div class="card">
-                    <div class="card-number">+81</div>
-                    <div class="card-label">Unit</div>
-                </div>
+            <div ref={row2Ref} className="card-row reverse">
+                {["49", "59", "71", "81", "+81"].map((num, i) => (
+                    <div className="card-item" key={i}>
+                        <div className="card-number">{num}</div>
+                        <div className="card-label">Unit</div>
+                    </div>
+                ))}
             </div>
-        </div>
+
+        </section>
     );
 }

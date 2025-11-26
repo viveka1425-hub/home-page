@@ -1,50 +1,54 @@
-/* Define the animation: simple back and forth position switch */
-@keyframes switch-position {
-    0% {
-        transform: translateX(0);
-    }
-
-    /* Start: Left */
-    50% {
-        transform: translateX(100px);
-    }
-
-    /* Middle: Right */
-    100% {
-        transform: translateX(0);
-    }
-
-    /* End: Back to Left */
+.rollImageContainer {
+    background-image: url('/Rolling.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 20px;
 }
 
-/* Base styles for the "spheres" */
-.sphere {
-    position: absolute;
-    /* Allows them to be positioned inside the RollImage container */
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    /* Makes them circular */
-    top: 50%;
-    transform: translateY(-50%);
-    /* Center vertically */
+/* Title styling */
+.rollTitle {
+    font-size: 48px;
+    margin-bottom: 10px;
 }
 
-/* Specific styles and animation application */
-.blue-sphere {
-    background: #4682B4;
-    /* Light Blue */
-    left: 10px;
-    /* Initial position */
-    /* Animate from left to right */
-    animation: switch-position 4s infinite linear;
+.rollSubtitle {
+    font-size: 24px;
+    margin-bottom: 30px;
 }
 
-.white-sphere {
-    background: #F8F8FF;
-    /* Off-white */
-    left: 110px;
-    /* Initial position (10px + 50px width + 50px gap) */
-    /* Animate from right to left (using a negative delay to start the animation mid-cycle) */
-    animation: switch-position 4s infinite linear reverse;
+/* Tablet View */
+@media (max-width: 992px) {
+    .rollTitle {
+        font-size: 36px;
+    }
+
+    .rollSubtitle {
+        font-size: 20px;
+    }
+
+    .rollImage {
+        width: 85%;
+        max-width: 700px;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+    .rollTitle {
+        font-size: 28px;
+    }
+
+    .rollSubtitle {
+        font-size: 18px;
+    }
+
+    .rollImage {
+        width: 95%;
+        max-width: 400px;
+    }
 }

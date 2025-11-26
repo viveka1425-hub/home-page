@@ -1,6 +1,10 @@
+.fourth {
+    min-width: 80vh;
+}
+
 .scroll-text {
     white-space: nowrap;
-    display: inline-block;
+    /* display: inline-block; */
     animation: marquee 25s linear infinite;
     color: #02ad8b;
     font-family: "Poppins", sans-serif;
@@ -9,10 +13,11 @@
     letter-spacing: 4px;
 }
 
-.brand-font{
+.brand-font {
     font-size: 25pt;
     margin-left: 10pt;
 }
+
 @keyframes marquee {
     0% {
         transform: translateX(0);
@@ -136,6 +141,7 @@
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: 5%;
+    margin-right: 5%;
 }
 
 .create-button:hover {
@@ -146,5 +152,11 @@
 @media (max-width: 768px) {
     .content-wrapper {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .fourth {
+        width: 945pt;
     }
 }

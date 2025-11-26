@@ -43,7 +43,7 @@ const Login = () => {
                             onChange={(e) => setPassword(e.target.value)}
                         />
                         <span className="eye-icon" onClick={() => setShowPass(!showPass)}>
-                            {showPass ? <EyeOff size={18} /> : <Eye size={18} />}
+                            {showPass ? <Eye size={18} /> : <EyeOff size={18} />}
                         </span>
                     </div>
 

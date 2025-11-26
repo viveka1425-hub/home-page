@@ -14,7 +14,7 @@ export default function Abc() {
     };
 
     return (
-        <div style={{width:"21.5%"}} className="container">
+        <div className="container">
 
             {/* LEFT SIDE */}
             <div

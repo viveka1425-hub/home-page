@@ -2,7 +2,7 @@ import "../Test/Footer.css";
 
 export default function Footer() {
   return (
-    <footer style={{ width: "21.5%" }} className="footer">
+    <footer className="footer">
       <div className="footer-top">
 
         <div className="brand-font">

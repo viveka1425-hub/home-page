@@ -10,7 +10,7 @@ import DevelopingFourth from './Fourth';
 import Abc from './Abc';
 const Test = () => {
     return (
-        <div style={{ fontFamily: "sans-serif", color: "white" }}>
+        <div>
             <div className="hero-section">
                 <header className="top-bar">
                     <nav className="nav-container">
@@ -37,26 +37,12 @@ const Test = () => {
             </div>
             <div>
                 <Card />
-            </div>
-            <div>
                 <ScrollSectionsAppThird />
-            </div>
-            <div>
                 < DevelopingFourth />
-            </div>
-            <div>
                 <About />
-            </div>
-            <div>
                 <RollingImage />
-            </div>
-            <div>
                 <Abc />
-            </div>
-            <div>
                 <Profile />
-            </div>
-            <div>
                 < Footer />
             </div>
         </div>

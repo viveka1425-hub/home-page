@@ -31,7 +31,6 @@ export default About;
 const styles = {
     page: {
         background: "linear-gradient(to bottom, #02ad8b, #ffffff)",
-        width:"21%",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

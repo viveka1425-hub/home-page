@@ -5,7 +5,7 @@
 
 /* LEFT PANEL */
 .left {
-  width: 55%;
+  width: 60%;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -66,4 +66,10 @@
 
 .bottom {
   background: black;
+}
+
+@media (max-width: 767px) {
+  .container {
+  flex-direction: row;
+  }
 }
