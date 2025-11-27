@@ -2,15 +2,6 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router-dom";
 import Login from "./Pages/Login/login";
 import Test from "./Pages/Test/Test";
-import Card from "./Pages/Card";
-import Fourth from "./Pages/Test/Fourth";
-import Footer from "./Pages/Test/Footer";
-import Profile from './Pages/Test/Profile';
-import Home from "./Pages/Test/Home";
-import About from "./Pages/Test/About";
-import RollingImage from "./Pages/Test/RollingImage";
-import Third from "./Pages/Test/Third";
-import Abc from "./Pages/Test/Abc";
 
 const router = createBrowserRouter([
   {
@@ -20,42 +11,6 @@ const router = createBrowserRouter([
   {
     path: "/Test",
     element: <Test />
-  },
-  {
-    path: "/Card",
-    element: <Card />
-  },
-  {
-    path: "/Third",
-    element: <Third />
-  },
-  {
-    path: "/Fourth",
-    element: <Fourth />
-  },
-  {
-    path: "/Footer",
-    element: < Footer />
-  },
-  {
-    path: "/Profile",
-    element: <Profile />
-  },
-  {
-    path: "/Home",
-    element: < Home />
-  },
-  {
-    path: "/About",
-    element: <About />
-  },
-  {
-    path: "/RollingImage",
-    element: <RollingImage />
-  },
-  {
-    path: "/Abc",
-    element: <Abc />
   }
 ])
 export default function App() {

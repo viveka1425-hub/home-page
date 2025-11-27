@@ -5,10 +5,10 @@ const DevelopingFourth = () => {
     return (
         <div style={{ fontFamily: 'Georgia, serif' }}>
             <div className='fourth'>
-                <div style={{ height: "850pt" }} className="image-color">
+                <div style={{ height: "850pt", padding: '2vw 10vw' }} className="image-color">
                     <h1 style={{
                         color: "black",
-                        fontSize: "80pt",
+                        fontSize: "60pt",
                         textAlign: "center",
                         fontFamily: "'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif",
                         fontWeight: "300"

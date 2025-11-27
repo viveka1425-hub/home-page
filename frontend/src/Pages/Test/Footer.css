@@ -5,7 +5,9 @@
     padding-left: 10pt;
     padding-right: 10pt;
     font-family: "Poppins", sans-serif;
-    width: 213vh;
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 /* ===== BRAND TITLE ===== */

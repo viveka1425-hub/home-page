@@ -1,9 +1,11 @@
 .hero-section {
     position: relative;
-    min-height: 100vh;
-    min-width: 80vh;
+    height: 100vh;
+    /* width: 100vw; */
+    /* FORCE full screen width */
     background-image: url('first.jpg');
     background-size: cover;
+    /* fills width + height */
     background-position: center;
     background-repeat: no-repeat;
     color: white;

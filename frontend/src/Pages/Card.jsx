@@ -27,7 +27,7 @@ export default function CardScrollSection() {
             // Row 1 → moves left
             gsap.fromTo(
                 row1Ref.current,
-                { x: "45%" },
+                { x: "55%" },
                 {
                     x: "-75%",
                     ease: "none",

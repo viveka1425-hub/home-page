@@ -1,10 +1,11 @@
+
 /* ---- DEFAULT (TABLET FIRST) ---- */
 .card-scroll-section {
     background: #ffecd6;
     color: black;
     overflow: hidden;
     text-align: center;
-    min-width: 943pt;
+    /* min-width: 100vw; */
 }
 
 /* Hide on Mobile */
@@ -61,7 +62,7 @@
 /* ---- DESKTOP ---- */
 @media (min-width: 1024px) {
     .card-scroll-section {
-        width: 930pt;
+        width: 100vw;
     }
 
     .card-number {
@@ -79,6 +80,6 @@
 
 @media (min-width: 768px) {
     .card-scroll-section {
-        width: 830pt;
+        width: 100vw;
     }
 }

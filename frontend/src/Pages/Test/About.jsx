@@ -39,6 +39,9 @@ const styles = {
         boxSizing: "border-box",
         color: "#ffffff",
         fontFamily: "Poppins, sans-serif",
+        width: "100vw",
+        maxWidth: "100vw",
+        overflowX: "hidden",
     },
 
     hurdleWrapper: {

@@ -1,6 +1,9 @@
 .fourth{
-    min-width: 80vh;
+    min-width: 100vw;
+    width: 100vw;
+    overflow-x: hidden;
 }
+
 .scroll-wrapper {
     overflow: hidden;
     background: white;
@@ -15,7 +18,8 @@
     color: #02ad8b;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    font-size: clamp(20px, 5vw, 48px); /* 🎯 responsive font */
+    font-size: clamp(20px, 5vw, 48px);
+    /* 🎯 responsive font */
     letter-spacing: clamp(2px, 1vw, 4px);
 }
 
@@ -23,7 +27,8 @@
 .scroll-item {
     display: inline-flex;
     align-items: center;
-    margin-right: clamp(10px, 4vw, 40px); /* spacing scales */
+    margin-right: clamp(10px, 4vw, 40px);
+    /* spacing scales */
 }
 
 /* Responsive Icon */
@@ -38,7 +43,8 @@
 /* Mobile Optimization */
 @media (max-width: 600px) {
     .scroll-text {
-        animation-duration: 15s; /* Faster scrolling on small screens */
+        animation-duration: 15s;
+        /* Faster scrolling on small screens */
     }
 }
 
@@ -58,15 +64,21 @@
 
 /* Animation */
 @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 
-.brand-font{
+.brand-font {
     font-size: 25pt;
     margin-left: 10pt;
 }
+
 @keyframes marquee {
     0% {
         transform: translateX(0);
@@ -95,6 +107,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .text-column {
@@ -188,14 +201,17 @@
     border: 2px black solid;
 }
 
+
 @media (max-width: 768px) {
     .content-wrapper {
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        /* switch to flexbox */
+        flex-direction: column;
     }
 }
 
-@media (min-width: 1024px){
-    .fourth{
-        width:945pt;
+@media (min-width: 1024px) {
+    .fourth {
+        width: 100vw;
     }
 }

@@ -82,11 +82,11 @@
 /* ---------------------- */
 /* 🖥 DESKTOP (default)   */
 /* ---------------------- */
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
     .number-text {
         font-size: 130pt;
     }
-}
+} */
 
 /* Background animation */
 @keyframes moveBG {
