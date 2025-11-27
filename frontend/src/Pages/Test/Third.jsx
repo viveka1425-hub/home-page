@@ -44,17 +44,17 @@ const AnimatedStar = ({ size = 40 }) => {
 
 const NumbersWithStars = () => {
     const numbers = [
-        { id: 1, value: "1,034", text: "Sample Data about Sample Things", position: { top: '10%', left: '39%' } },
-        { id: 2, value: "2", text: "Sample Data about Sample Things", position: { top: '35%', left: '73%' } },
-        { id: 3, value: "54", text: "Sample Data about Sample Things", position: { top: '60%', left: '81%' } },
-        { id: 4, value: "25", text: "Sample Data about Sample Things", position: { top: '80%', left: '28%' } }
+        { id: 1, value: "1,034", text: "Sample Data about Sample Things", position: { top: '10%', left: '42%' } },
+        { id: 2, value: "2", text: "Sample Data about Sample Things", position: { top: '35%', left: '75.3%' } },
+        { id: 3, value: "54", text: "Sample Data about Sample Things", position: { top: '60%', left: '83.5%' } },
+        { id: 4, value: "25", text: "Sample Data about Sample Things", position: { top: '80%', left: '31%' } }
     ];
 
     return (
         <div style={{
             position: 'relative',
             height: "70%",
-            marginBottom: '-50pt',
+            // marginBottom: '-50pt',
             minHeight: '100vh',
             background: 'linear-gradient(180deg, #406964 0%, #80aba3 25%, #ebf7f3 50%, #d1c4ff 75%, #d1c4ff 100%)',
             overflow: 'hidden',
@@ -126,7 +126,7 @@ const NumbersWithStars = () => {
                 />
             </svg>
 
-            <div style={{ marginLeft: "18%", marginTop: "12%" }}>
+            <div style={{ textAlign:"center", marginTop: "12%" }}>
                 <img src='line.png'></img>
             </div>
             {/* Numbers with Stars */}

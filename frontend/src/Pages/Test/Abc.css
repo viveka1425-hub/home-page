@@ -1,25 +1,29 @@
 .container {
   display: flex;
-  height: 700pt;
+  height: 100vh;
+  min-height: 100vw;
 }
 
 /* LEFT PANEL */
 .left {
-  width: 60%;
+  width: 50%;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   position: relative;
+  transition: background-image 0.5s ease-in-out;
 }
 
 /* Rotating foreground image */
 .rotate-img {
   position: absolute;
   width: 600px;
-  font-weight: 40px;
+  max-width: 80%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* animation: earthSpin 5s linear infinite; */
+  transition: all 0.3s ease;
+  animation: earthSpin 20s linear infinite;
 }
 
 @keyframes earthSpin {
@@ -32,10 +36,9 @@
   }
 }
 
-
 /* RIGHT PANEL */
 .right {
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
 }
@@ -43,7 +46,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  height: 130vh;
+  flex: 1;
 }
 
 .box {
@@ -54,22 +57,287 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  border: 2px solid #fff;
+  border: 2px solid #333;
+  transition: all 0.3s ease;
+  user-select: none;
 }
 
-.box:hover {
-  border: 1px solid #333;
+.box:hover,
+.box.active {
   background: white;
   color: black;
-  font-size: 50pt;
+}
+
+.box.active {
+  font-size: 50px;
+  font-weight: bold;
 }
 
 .bottom {
   background: black;
+  padding: 30px;
+  flex-shrink: 0;
 }
 
-@media (max-width: 767px) {
+.project-title {
+  color: #9070c4;
+  margin: 0 0 20px 0;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.project-description {
+  color: white;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ----------- RESPONSIVE BREAKPOINTS ----------- */
+
+/* Large Desktop */
+@media (min-width: 1400px) {
   .container {
-  flex-direction: row;
+    height: 100vh;
+  }
+
+  .rotate-img {
+    width: 700px;
+  }
+
+  .project-title {
+    font-size: 52px;
+  }
+
+  .project-description {
+    font-size: 20px;
+  }
+}
+
+/* Tablet Landscape */
+@media (max-width: 1200px) and (min-width: 769px) {
+  .container {
+    height: 90vh;
+  }
+
+  .rotate-img {
+    width: 450px;
+  }
+
+  .box {
+    font-size: 40px;
+  }
+
+  .box.active {
+    font-size: 45px;
+  }
+
+  .project-title {
+    font-size: 42px;
+  }
+
+  .project-description {
+    font-size: 17px;
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .left {
+    width: 100%;
+    height: 50vh;
+    min-height: 400px;
+  }
+
+  .right {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .rotate-img {
+    width: 350px;
+    animation: earthSpin 25s linear infinite;
+  }
+
+  .grid {
+    height: auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .box {
+    font-size: 35px;
+    padding: 20px;
+  }
+
+  .box.active {
+    font-size: 38px;
+  }
+
+  .bottom {
+    padding: 25px;
+  }
+
+  .project-title {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+
+  .project-description {
+    font-size: 16px;
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 667px) and (max-height: 500px) {
+  .container {
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  .left {
+    width: 60%;
+    height: 100%;
+  }
+
+  .right {
+    width: 40%;
+    height: 100%;
+  }
+
+  .rotate-img {
+    width: 250px;
+  }
+
+  .box {
+    font-size: 24px;
+    padding: 10px;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .container {
+    min-height: 100vh;
+  }
+
+  .left {
+    height: 40vh;
+    min-height: 300px;
+  }
+
+  .right {
+    height: 60vh;
+  }
+
+  .rotate-img {
+    width: 250px;
+    animation: earthSpin 30s linear infinite;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .box {
+    font-size: 28px;
+    padding: 15px;
+    border-width: 1px;
+  }
+
+  .box.active {
+    font-size: 30px;
+  }
+
+  .bottom {
+    padding: 20px 15px;
+  }
+
+  .project-title {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .project-description {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+  .rotate-img {
+    width: 200px;
+  }
+
+  .box {
+    font-size: 24px;
+    padding: 12px;
+  }
+
+  .box.active {
+    font-size: 26px;
+  }
+
+  .project-title {
+    font-size: 28px;
+  }
+
+  .project-description {
+    font-size: 14px;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .box:hover {
+    background: #111;
+    color: white;
+    transform: none;
+  }
+
+  .box.active:hover {
+    background: white;
+    color: black;
+    transform: scale(1.05);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .rotate-img {
+    animation: none;
+  }
+
+  .box {
+    transition: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .box {
+    border-color: white;
+  }
+
+  .box.active {
+    border-color: yellow;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .bottom {
+    background: #1a1a1a;
+  }
+
+  .box {
+    background: #2d2d2d;
+    border-color: #444;
   }
 }

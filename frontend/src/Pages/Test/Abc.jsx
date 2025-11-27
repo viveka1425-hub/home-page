@@ -27,7 +27,7 @@ export default function Abc() {
                 <img
                     src={`/images/${activeLetter}.png`}
                     className="rotate-img"
-                    alt=""
+                    alt={`${activeLetter} visual representation`}
                 />
             </div>
 
@@ -38,7 +38,7 @@ export default function Abc() {
                     {letters.map((letter, index) => (
                         <div
                             key={letter}
-                            className="box"
+                            className={`box ${activeLetter === letter ? 'active' : ''}`}
                             onClick={() => handleClick(letter, index)}
                         >
                             {letter}
@@ -47,8 +47,8 @@ export default function Abc() {
                 </div>
 
                 <div className="bottom">
-                    <h2 style={{ color: "#9070c4", margin:"30pt", fontSize:"48px" }}>A-Z PROJECT</h2>
-                    <p style={{ color: "white", marginLeft:"30pt", marginBottom:"28%", fontsize:"45px" }} className="text">
+                    <h2 className="project-title">A-Z PROJECT</h2>
+                    <p className="project-description">
                         Download our library of transparent video letters<br />
                         and add them to your next project.
                     </p>
