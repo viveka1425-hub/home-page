@@ -73,7 +73,7 @@ const DevelopingFourth = () => {
 
 
             {/* Footer/End Spacer */}
-            {/* <div style={{ overflow: "hidden", background: "white", padding: -20 }}>
+            <div style={{ overflow: "hidden", background: "white", width:"100vw" }}>
                 <div className="scroll-text">
                     {[...Array(20)].map((_, i) => (
                         <span key={i} style={{ display: "inline-flex", alignItems: "center" }}>
@@ -82,7 +82,7 @@ const DevelopingFourth = () => {
                         </span>
                     ))}
                 </div>
-            </div> */}
+            </div>
 
         </div>
     );

@@ -1,25 +1,16 @@
-/* ---------------------- */
-/* ⭐ GLOBAL RESPONSIVE FIX */
-/* ---------------------- */
-
-/* Make SVG box responsive */
 .responsive-container {
     position: relative;
     height: 100vh;
     overflow: hidden;
 }
 
-/* Number text */
 .number-text {
     font-size: 130pt;
     font-family: "Didot", serif;
-    /* background-size: 200%; */
     color: transparent;
-    /* webkit-background-clip: text; */
     animation: moveBG 11s linear infinite;
 }
 
-/* Star + number container */
 .number-box {
     display: flex;
     flex-direction: row;
@@ -27,10 +18,6 @@
     gap: 15px;
 }
 
-
-/* ---------------------- */
-/* 📱 MOBILE (max 600px)  */
-/* ---------------------- */
 @media (max-width: 600px) {
 
     .responsive-container {
@@ -53,15 +40,11 @@
         width: 120px;
     }
 
-    /* Fix star size */
     .star-container {
         transform: scale(0.5);
     }
 }
 
-/* ---------------------- */
-/* 📲 TABLET (601–992px)  */
-/* ---------------------- */
 @media (min-width: 601px) and (max-width: 992px) {
 
     .number-text {
@@ -79,17 +62,12 @@
     }
 }
 
-/* ---------------------- */
-/* 🖥 DESKTOP (default)   */
-/* ---------------------- */
-/* @media (min-width: 992px) {
-    .number-text {
-        font-size: 130pt;
-    }
-} */
-
-/* Background animation */
 @keyframes moveBG {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 100% 100%; }
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
 }

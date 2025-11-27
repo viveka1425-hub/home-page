@@ -1,7 +1,7 @@
 .hero-section {
     position: relative;
     height: 100vh;
-    /* width: 100vw; */
+    width: 100vw;
     /* FORCE full screen width */
     background-image: url('first.jpg');
     background-size: cover;
